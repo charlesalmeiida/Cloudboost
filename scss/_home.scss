@@ -1,0 +1,220 @@
+.s-hero {
+  padding-top: 8rem;
+  .container {
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 9.7rem;
+    .hero-content {
+      @include flexSpaceBetween;
+      .left {
+        flex: 1;
+        max-width: 60rem;
+        h1 {
+          font-size: 5.6rem;
+          margin-bottom: 1.6rem;
+          span {
+            color: $purple-10;
+            text-decoration: underline;
+            font-family: "Space Grotesk", sans-serif;
+          }
+        }
+        p {
+          color: $gray-200;
+          font-size: 2.2rem;
+          font-weight: 400;
+          line-height: 150%;
+          max-width: 49.1rem;
+          margin-bottom: 3.2rem;
+        }
+        ul {
+          @include flexSpaceBetween;
+          align-items: flex-start !important;
+          max-width: 33.9rem;
+          width: 100%;
+          margin: 4.8rem 0;
+        }
+      }
+      .img-mobile {
+        display: none;
+      }
+    }
+  }
+  @include responsivo("laptop") {
+    padding-top: 5rem;
+    .hero-content {
+      padding-bottom: 5rem;
+      .left {
+        max-width: 55rem;
+        h1 {
+          font-size: 5rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+      .right {
+        img {
+          max-width: 53rem;
+        }
+      }
+    }
+  }
+  @include responsivo("tablet") {
+    .hero-content {
+      flex-direction: column;
+      gap: 4rem;
+      .left {
+        max-width: 100% !important;
+        text-align: center;
+        p {
+          margin: 0 auto;
+          margin-bottom: 3rem;
+        }
+        ul {
+          margin: 4rem auto !important;
+        }
+      }
+    }
+  }
+  @include responsivo("mobile") {
+    padding-top: 7.2rem;
+    .hero-content {
+      .left {
+        h1 {
+          font-size: 4rem;
+          span {
+            display: block;
+          }
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+      .right {
+        img {
+          display: none;
+        }
+        .img-mobile {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.s-recursos {
+  padding-top: 11.2rem;
+  .container {
+    .top {
+      margin-bottom: 8rem;
+      @include flexSpaceBetween;
+      h3 {
+        letter-spacing: -1.2px;
+        max-width: 66.1rem;
+      }
+      p {
+        color: $gray-200;
+        font-size: 1.6rem;
+        line-height: 150%;
+      }
+    }
+    ul {
+      padding-bottom: 11.2rem;
+      @include flexSpaceBetween;
+      align-items: flex-start !important;
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+    }
+  }
+  @include responsivo("laptop") {
+    padding-top: 5rem;
+    ul {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+  @include responsivo("tablet") {
+    .top {
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 5rem;
+      h3 {
+        text-align: center;
+      }
+    }
+    ul {
+      padding-bottom: 5rem !important;
+    }
+  }
+  @include responsivo("mobile") {
+    padding-top: 4rem;
+    .top {
+      margin-bottom: 3rem;
+      h3 {
+        font-size: 2.8rem;
+      }
+    }
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.s-email {
+  padding: 9.6rem 0.8rem 12.6rem;
+  .container {
+    background: url(../assets/svg/bg-box.svg) no-repeat center center;
+    width: 121.6rem;
+    height: 46rem;
+    max-width: 100%;
+    display: flex;
+    border-radius: 1rem;
+    .content-email {
+      @include flexTotalCenter;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 78.6rem;
+      width: 100%;
+      h2 {
+        font-size: 5.6rem;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.168rem;
+        margin-bottom: 0.8rem;
+      }
+      p {
+        color: $gray-200;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        max-width: 50.1rem;
+        margin-bottom: 3.2rem;
+      }
+      .btn-primary {
+        padding: 1.9rem 6.6rem;
+      }
+    }
+  }
+  @include responsivo("tablet") {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @include responsivo("mobile") {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .container {
+      height: auto;
+      background-size: cover;
+      padding: 4rem 1.5rem;
+      h2 {
+        font-size: 2.9rem !important;
+      }
+      p {
+        font-size: 1.8rem !important;
+      }
+    }
+  }
+}
